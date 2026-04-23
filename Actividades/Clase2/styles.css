@@ -32,7 +32,7 @@ h3{
     padding-bottom: 0px;
     margin-bottom: 0;
 }
-body{
+.not{
     margin: 0;
 
 }
@@ -46,6 +46,7 @@ body{
     display: flex;
     gap: 20px;
     padding: 20px;
+
 }
 .subT{
     text-align: justify;
@@ -84,8 +85,9 @@ body{
     font-weight: 100;
 }
 .comentario{
+    display: block;
     width: 300px;
-    margin:  40px auto;
+    margin: 40px auto;
     padding: 12px;
     background-color: orange;
     color: white;
@@ -95,5 +97,56 @@ body{
     font-size: 20px;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 0 10px #0007; 
+    box-shadow: 0 0 10px #0007;
+    border: none;
+}
+/*Formulario */
+.respuesta{
+    background-color: #202742; 
+}
+.h2_form{
+    text-align: center;
+    font-size: 25px;
+}
+.form_coment{
+    background-color: #2a314d;
+    margin: 30px;
+    padding: 1px;
+    width: auto;
+    height: auto;
+}
+.c_form{
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #D2D6DC;
+}
+.datos, .msj{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    border: none;
+    background-color: #313544;
+    border-left: 5px solid #D2D6DC;
+    color: #D2D6DC;
+    border-radius: 6px;
+}
+.msj{
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    height: 200px;
+}
+input[type="checkbox"] {
+    accent-color: orange;
+}
+.enviar{
+    display: block;
+    margin-top: 20px;
+    height: 43px;
+    width: 30%;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #0007;
 }
