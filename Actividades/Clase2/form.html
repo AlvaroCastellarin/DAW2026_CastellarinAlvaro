@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="respuesta">
+    <form class="form_coment" action="">
+        <div class="c_form"><h2 class="h2_form">Ingrese los siguentes datos para poder enviar su comentario: </h2></div>
+        <div class="c_form">
+            <label class="l_datos">Nombre:</label>
+            <input class="datos" type="text" placeholder="Juan Pérez" minlength="3" required>
+        </div>
+        <div class="c_form">
+            <label class="l_datos">Mail:</label>
+            <input class="datos" type="email" placeholder="ejemplo@hotmail.com" minlength="10" required>
+        </div>
+        <div class="c_form">
+            <label class="l_datos">Mensaje:</label>
+            <textarea class="msj" placeholder="Me gusto mucho la noticia!" minlength="50" maxlength="600"  required></textarea>
+        </div>
+        <div class="c_form">
+            <label class="l_datos"><input type="checkbox">Recibir notificaciones de nuevas noticias</label>
+            <input class="enviar" type="submit" value="Enviar" required>
+        </div>
+
+    </form>
+</body>
+</html>
