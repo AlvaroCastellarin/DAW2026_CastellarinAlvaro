@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Async - Formulario de Suscripción</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__content">
+            <p class="eyebrow">JavaScript - Async & Arquitectura Cliente-Servidor</p>
+            <h1>Formulario de suscripción al diario digital</h1>
+            <p>
+                Completá el formulario, validá los campos con JavaScript y enviá el payload
+                al endpoint indicado por el docente usando <strong>fetch</strong> y <strong>async/await</strong>.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card intro-card">
+            <h2>Actividad</h2>
+            <p>
+                El objetivo es manipular el DOM para validar los datos ingresados antes de enviarlos
+                al servidor. Si el servidor responde correctamente, deberás mostrar un mensaje de éxito
+                y visualizar la respuesta recibida.
+            </p>
+        </section>
+
+        <section class="card">
+            <form id="subscriptionForm" novalidate>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="alumno">Nombre y apellido del alumno</label>
+                        <input type="text" id="alumno" name="alumno" placeholder="Ej: Juan Pérez">
+                        <small class="error-message" id="error-alumno"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="nombreCompleto">Nombre completo del suscriptor</label>
+                        <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Ej: Ana García">
+                        <small class="error-message" id="error-nombreCompleto"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Ej: ana@email.com">
+                        <small class="error-message" id="error-email"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" name="edad" placeholder="Ej: 25">
+                        <small class="error-message" id="error-edad"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="suscripcion">Tipo de suscripción</label>
+                        <select id="suscripcion" name="suscripcion">
+                            <option value="">Seleccionar una opción</option>
+                            <option value="Mensual">Mensual</option>
+                            <option value="Trimestral">Trimestral</option>
+                            <option value="Anual">Anual</option>
+                        </select>
+                        <small class="error-message" id="error-suscripcion"></small>
+                    </div>
+                </div>
+
+                <div class="field terms-field">
+                    <label>
+                        <input type="checkbox" id="aceptaTerminos" name="aceptaTerminos">
+                        Acepto los términos y condiciones de la suscripción.
+                    </label>
+                    <small class="error-message" id="error-aceptaTerminos"></small>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" id="btnEnviar">Enviar suscripción</button>
+                    <button type="reset" class="button-secondary">Limpiar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card response-card" aria-live="polite">
+            <h2>Respuesta del servidor</h2>
+            <p id="mensajeEstado" class="status-message">Todavía no se envió ningún formulario.</p>
+            <pre id="respuestaServidor" class="server-response">{}</pre>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
